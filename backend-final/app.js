@@ -77,13 +77,11 @@ app.locals.title = 'PartyGo';
 
 
 const orders = require('./routes/orders') // <--   esto
-
 const index = require('./routes/index');
 const auth = require('./routes/auth') // <--   esto
 
 app.use('/', orders)
 app.use('/', auth) 
-
 app.use('/', index);
 
 

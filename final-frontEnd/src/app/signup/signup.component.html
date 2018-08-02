@@ -1,0 +1,32 @@
+<h1 *ngIf="user">Hola {{user.username}}</h1>
+
+<section >
+  <div *ngIf="isLogged">
+    
+        <h2>Inicia sesión</h2>
+        <input placeholder="email" [(ngModel)]="form.email" type="text">
+        <br>
+        <input placeholder="tu password" [(ngModel)]="form.password"  type="password">
+        <button (click)="login()" >Entrar</button>
+        <h2>
+          Entra con Facebook <button (click)="loginWithFacebook()" >Facebook Login</button>
+        </h2>
+        <h2>
+          Entra con Google <button (click)="loginWithGoogle()" >Facebook Login</button>
+        </h2>
+        <p>No tienes cuenta? <span (click)="isLogged=!isLogged" >Click aquí</span></p>
+      </div>
+      
+      <div *ngIf="!isLogged">
+        <h2>Registrate</h2>
+        <input [(ngModel)]="form.username" placeholder="username" type="text">
+        <input placeholder="email" [(ngModel)]="form.email" type="text">
+        <br>
+        <input placeholder="tu password" [(ngModel)]="form.password"  type="password">
+        <button (click)="signUp()" >Registrarme</button>
+        <p>Ya tienes cuenta? <span (click)="isLogged=!isLogged" >Click aquí</span></p>
+      </div>
+
+     
+      
+</section>

@@ -3,7 +3,10 @@ const Schema = require("mongoose").Schema;
 const userSchema = new require("mongoose").Schema(
   {
     username: String,
-    photoURL: String,
+    photoURL:{
+      type:String,
+      default:"https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Party-Poppers-512.png"
+    },
     email: String,
     addres: [
       {
@@ -23,7 +26,7 @@ const userSchema = new require("mongoose").Schema(
     ],
     role: {
       type: String,
-      enum: ["USER", "PROVIDER", "ADMIN"],
+      enum: ["USER", "PROVIDER ", "ADMIN"],
       default: "USER"
     },
     orders:[{

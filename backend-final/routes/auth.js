@@ -24,8 +24,8 @@ router.post("/login", passport.authenticate("local"), (req, res, next) => {
   res.json(req.user);
 });
 
-router.get("/private", isAuthenticated, (req, res, next) => {
-    res.send("esto es privado");
+router.get("/profile", isAuthenticated, (req, res, next) => {
+    res.json(req.user);
   });
   
 
