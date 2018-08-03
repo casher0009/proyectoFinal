@@ -3,6 +3,8 @@ const Schema = require("mongoose").Schema;
 const userSchema = new require("mongoose").Schema(
   {
     username: String,
+    facebookId:String,
+    phone: Number,
     photoURL:{
       type:String,
       default:"https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Party-Poppers-512.png"

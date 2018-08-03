@@ -11,9 +11,11 @@ import { HttpModule } from "@angular/http";
 //servicios
 import { AuthService } from "./services/auth.service";
 import { routes } from "./routes";
+import { NavbarComponent } from './navbar/navbar.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
-  declarations: [AppComponent, SignupComponent],
+  declarations: [AppComponent, SignupComponent, NavbarComponent, MainComponent],
   imports: [
     BrowserModule,
     FormsModule,

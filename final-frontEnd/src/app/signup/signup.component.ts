@@ -33,20 +33,27 @@ login(){
   this.authservice.login(this.form)
   .subscribe(user=>{
     this.user = user
-    localStorage.setItem('user', JSON.stringify(user))
-  })
+    localStorage.setItem('user', JSON.stringify(user));
+    this.router.navigate(["profile"])
+    })
 }
 
 loginWithFacebook(){
   this.firebaseService.loginWithFacebook()
+  this.router.navigate(["profile"])
+
 }
 
-loginWithGoogle(){
-  this.firebaseService.loginWithGoogle()
-}
+// loginWithGoogle(){
+//   this.firebaseService.loginWithGoogle()
+// }
 
 
   ngOnInit() {
+    if(localStorage.getItem('user')){
+      this.router.navigate(['profile'])
+    }
+
   }
 
 }

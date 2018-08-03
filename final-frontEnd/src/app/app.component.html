@@ -1,9 +1,8 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<nav>
-    <a [routerLink]="['home']"> Home </a>
-    |
-    <a [routerLink]="['signup']"> Signup </a>
-    |
-    <a href="#!" (click)="logout()" > Logout </a>
-</nav>
-<router-outlet></router-outlet>
+
+<body>
+  <nav>
+    <app-navbar></app-navbar>
+  </nav>
+    <router-outlet></router-outlet>
+</body>
+

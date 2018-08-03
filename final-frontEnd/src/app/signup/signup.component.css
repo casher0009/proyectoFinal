@@ -1,6 +1,15 @@
 section{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 100vh;
+  text-align: center
+}
+
+
+
+div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
 }

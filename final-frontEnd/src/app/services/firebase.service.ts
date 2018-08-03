@@ -24,8 +24,8 @@ export class FirebaseService {
     firebase.auth().signInWithPopup(this.provider)
     .then(snap=>{
       //console.log(snap.credential.accessToken)
-      localStorage.setItem('facebookToken', JSON.stringify(snap.credential.accessToken) );
-      localStorage.setItem('user', JSON.stringify(snap.user))
+      localStorage.setItem('facebookToken', JSON.stringify(snap.credential.accessToken));
+      // localStorage.setItem('user', JSON.stringify(snap.user))
       this._sendTokenToBackend(snap)
     })
   }
@@ -51,6 +51,8 @@ export class FirebaseService {
     })
     .then(res=>{
       console.log(res)
+      localStorage.setItem('user', JSON.stringify(res))
+
     }) 
   }
 
