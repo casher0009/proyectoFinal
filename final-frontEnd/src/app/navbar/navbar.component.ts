@@ -19,10 +19,7 @@ export class NavbarComponent implements OnInit {
 
   logout(){
     localStorage.removeItem('user')
-<<<<<<< HEAD
     localStorage.removeItem('facebookToken')
-=======
->>>>>>> e592550f6696f99191174900e1e3d6e4fa68d685
   }
 
   ngOnInit() {

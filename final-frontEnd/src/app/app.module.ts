@@ -27,9 +27,11 @@ import { SlidesComponent } from "./main/slides/slides.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { SuportComponent } from "./suport/suport.component";
 import { TrackorderComponent } from "./trackorder/trackorder.component";
+import { MapsComponent } from './trackorder/maps/maps.component';
 
 @NgModule({
   declarations: [
+    MainComponent,
     SlidesComponent,
     SuportComponent,
     TrackorderComponent,
@@ -42,7 +44,7 @@ import { TrackorderComponent } from "./trackorder/trackorder.component";
     NeworderComponent,
     SignupComponent,
     NavbarComponent,
-    MainComponent
+    MapsComponent
   ],
   imports: [
     BrowserModule,
