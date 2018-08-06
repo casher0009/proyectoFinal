@@ -1,10 +1,15 @@
+<<<<<<< HEAD
 import { Component, ViewChild, ViewChildren, OnInit, AfterViewInit, ElementRef, QueryList } from '@angular/core';
+=======
+import { Component, OnInit } from '@angular/core';
+>>>>>>> e592550f6696f99191174900e1e3d6e4fa68d685
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css']
 })
+<<<<<<< HEAD
 export class MainComponent implements OnInit, AfterViewInit{
 
     // Access document elements
@@ -14,11 +19,16 @@ export class MainComponent implements OnInit, AfterViewInit{
     @ViewChildren('materialboxed') materialboxed: QueryList<ElementRef>;
     @ViewChildren('scrollspy') scrollspy: QueryList<ElementRef>;
   
+=======
+export class MainComponent implements OnInit {
+
+>>>>>>> e592550f6696f99191174900e1e3d6e4fa68d685
   constructor() { }
 
   ngOnInit() {
   }
 
+<<<<<<< HEAD
   // Initialize Materialize JS
   ngAfterViewInit() {
 
@@ -44,4 +54,6 @@ export class MainComponent implements OnInit, AfterViewInit{
 
   }
 
+=======
+>>>>>>> e592550f6696f99191174900e1e3d6e4fa68d685
 }

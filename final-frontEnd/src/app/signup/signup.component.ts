@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Component, ViewChild, ViewChildren, OnInit, AfterViewInit, ElementRef, QueryList } from '@angular/core';
+=======
+import { Component, OnInit } from '@angular/core';
+>>>>>>> e592550f6696f99191174900e1e3d6e4fa68d685
 import{AuthService} from '../services/auth.service'
 import{Router} from '@angular/router'
 import {FirebaseService} from '../services/firebase.service'
@@ -9,11 +13,16 @@ import {FirebaseService} from '../services/firebase.service'
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
+<<<<<<< HEAD
 export class SignupComponent implements OnInit, AfterViewInit{
 
   @ViewChild('sidenav') sidenav: ElementRef;
 
   isLogged = true
+=======
+export class SignupComponent implements OnInit {
+  isLogged = false
+>>>>>>> e592550f6696f99191174900e1e3d6e4fa68d685
   form={}
   user=null
 
