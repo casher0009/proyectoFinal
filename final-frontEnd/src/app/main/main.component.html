@@ -1,0 +1,355 @@
+<div id="inicio" class="scrollspy" #scrollspy>
+
+  <!-- Navbar -->
+  <div class="navbar-fixed">
+    <nav class="teal-blue">
+      <div class="container">
+        <div class="nav-wrapper">
+          <img id="logo" src="https://res.cloudinary.com/casher0009ironhack/image/upload/v1533254129/logo_partygo.png" alt="partygo Logo">
+          <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a href="#inicio">Inicio</a>
+            </li>
+            <li>
+              <a href="#reciente">Fiestas Recientes</a>
+            </li>
+            <li>
+              <a href="#galeria">Galeria</a>
+            </li>
+            <li>
+              <a href="#contacto">Contacto</a>
+            </li>
+            <li>
+              <a [routerLink]="['signup']"> Arma tu fiesta!! </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <ul class="sidenav" id="mobile-nav" #sidenav>
+    <li>
+      <a href="#inicio">Inicio</a>
+    </li>
+    <li>
+      <a href="#reciente">Fiestas Recientes</a>
+    </li>
+    <li>
+      <a href="#galeria">Galeria</a>
+    </li>
+    <li>
+      <a href="#contacto">Contacto</a>
+    </li>
+  </ul>
+
+
+  <!-- Slider -->
+  <section class="slider" #slider>
+    <ul class="slides">
+      <li>
+        <img src="https://i.ytimg.com/vi/6LfL74Pf8E8/maxresdefault.jpg">
+        <div class="caption center-align">
+          <h2 id="firstPhoto">La Fiesta De Tus Sueños</h2>
+          <h5 id="firstPhoto-sub" class="light grey-text text-lighten-3 hide-on-small-only">
+            <blockquote>
+              <b> Hacemos que la fiesta de tus sueños este a un click de distancia!!!</b>
+            </blockquote>
+          </h5>
+        </div>
+      </li>
+      <li>
+        <img src="http://www.svcmscentral.com/SVsitefiles/elsdgato/contenido/med/999d61_decoracion-de-fiestas-infantiles-en-bogota.jpg">
+        <div id="secondPhoto" class="caption left-align">
+          <h2>Siempre Sabras Cuanto Vas Ga$tar</h2>
+          <h5 id="secondPhoto-sub" class="light grey-text text-lighten-3 hide-on-small-only">
+            <blockquote class="quo1">
+              <b>Planifica, crea y disfruta, Nosotros nos encargamos del resto</b>
+            </blockquote>
+          </h5>
+        </div>
+      </li>
+      <li>
+        <img src="http://photos.catchmyparty-cdn.com/PL/photos/0106/2676/002.jpg">
+        <div id="thirdPhoto" class="caption left-align">
+          <h2>Infantil, Casual o Formal
+            <br> Tu Eliges</h2>
+          <h5 id="thirdPhoto-sub" class="light grey-text text-lighten-3 hide-on-small-only">
+            <blockquote>
+              <b>Cumpleaños, Bodas, Graduaciones
+                <br> Cada evento es único
+                <br> Crearemos para ti una experiencia
+                <br> inolvidable</b>
+            </blockquote>
+          </h5>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section section-follow teal-blue darken-2 white-text center">
+      <a [routerLink]="['signup']"> <h5 id="Order" > >>>Pide tu fiesta ahora mismo!!<<< </h5> </a>
+
+  </section>
+
+  <!-- Icon Boxes -->
+  <section class="section section-icons grey lighten-4 center">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="card-panel">
+            <i class="material-icons large teal-text-blue">room</i>
+            <h4>Vamos</h4>
+            <p>Donde lo requieras,
+              <br> ahi estará un organizador para apoyarte</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel">
+            <i class="material-icons large teal-text-blue">local_shipping</i>
+            <h4>Monitoreo GPS</h4>
+            <p>Sabras donde viene tu fiesta, y en cuanto llegará</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel">
+            <i class="material-icons large teal-text-blue">child_care</i>
+            <h4>Actitud</h4>
+            <p>Es una fiesta!!!
+              <br> por eso siempre nos veras alegres</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-follow teal-blue darken-2 white-text center">
+  </section>
+
+  <!-- Reciente -->
+  <section id="reciente" class="section section-popular scrollspy" #scrollspy>
+    <div class="container">
+      <div class="row">
+        <h4 class="center">
+          <span class="teal-text-blue">Fiestas</span> Recientes</h4>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img height="250px" width="195" src="https://scontent.fmex10-1.fna.fbcdn.net/v/t1.0-9/1186179_10202044073087871_638336579_n.jpg?_nc_cat=0&oh=bbfb4248597546b15fb2d6def70b813e&oe=5BC59F2E"
+                alt="fiesta bautizo">
+              <span class="card-title">CDMX</span>
+            </div>
+            <div class="card-content">
+              <p>
+                <b>Festejado:
+                  <span class="teal-text-blue">Kary</span>
+                </b>
+              </p>
+              <p>
+                <br> Personas: 150
+                <br> 15 mesas Adulto
+                <br> 3 mesas Infantil
+                <br> Adorno:
+                <b>
+                  <span class="teal-text-blue">Enredados</span>
+                </b>
+
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img height="229px" width="195" src="https://scontent.fmex10-1.fna.fbcdn.net/v/t1.0-9/13043554_997276287034129_8138249630792101910_n.jpg?_nc_cat=0&oh=92f036901ada48d57c123da3096b59ca&oe=5BCBC854"
+                alt="fiesta bautizo">
+              <span class="card-title">Edo Mex</span>
+            </div>
+            <div class="card-content">
+              <p>
+                <b>Festejado:
+                  <span class="teal-text-blue">Leonardo</span>
+                </b>
+              </p>
+              <p>
+                <br> Personas: 100
+                <br> 10 mesas Adulto
+                <br> 2 mesas Infantil
+                <br> Adorno:
+                <b>
+                  <span class="teal-text-blue">Bautizo/Spiderman</span>
+                </b>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img height="229" width="195" src="https://scontent.fmex10-1.fna.fbcdn.net/v/t1.0-9/1004571_456388124456284_1401083337_n.jpg?_nc_cat=0&oh=c88373aba08c44b1e0775685c6cf7cc5&oe=5BD0EDA4"
+                alt="fiesta bautizo">
+              <span class="card-title">CDMX</span>
+            </div>
+            <div class="card-content">
+              <p>
+                <b>Festejado:
+                  <span class="teal-text-blue">Andrea</span>
+                </b>
+              </p>
+              <p>
+                <br> Personas: 80
+                <br> 8 mesas Adulto
+                <br> 2 mesas Infantil
+                <br> Adorno:
+                <b>
+                  <span class="teal-text-blue">Tinkerbell/Piratas</span>
+                </b>
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Icons -->
+  <section class="section section-follow teal-blue darken-2 white-text center">
+  </section>
+
+  <!--  galeria -->
+  <section id="galeria" class="section section-gallery scrollspy" #scrollspy>
+    <div class="container">
+      <h4 class="center">
+        <span class="teal-text-blue">Photo</span> Gallery</h4>
+      <div class="row">
+        <h5 class="center">
+          <span class="teal-text-blue">Girls</span> Party</h5>
+
+        <div class="col s12 m3">
+
+          <img src="https://i.pinimg.com/originals/81/a3/c5/81a3c5a21a97c7432fb3b8e2cf3dca36.jpg" alt="random image" class="materialboxed responsive-img"
+            #materialboxed>
+        </div>
+        <div class="col s12 m3">
+          <img src="https://i.pinimg.com/564x/3d/3a/e6/3d3ae6b35948bf14e955292aa46b39ab.jpg" alt="random image" class="materialboxed responsive-img"
+            #materialboxed>
+        </div>
+        <div class="col s12 m3">
+          <img src="https://i.pinimg.com/originals/89/8c/13/898c134881432eda8192355d4437b24e.jpg" alt="random image" class="materialboxed responsive-img"
+            #materialboxed>
+        </div>
+        <div class="col s12 m3">
+          <img src="https://i.pinimg.com/originals/d3/d3/99/d3d3998b66a0197c46a93ad923fe6bc2.jpg" alt="random image" class="materialboxed responsive-img"
+            #materialboxed>
+        </div>
+
+      </div>
+      <div class="row">
+        <h5 class="center">
+          <span class="teal-text-blue">Boys</span> Party</h5>
+
+        <div class="col s12 m3">
+          <img src="https://i.pinimg.com/originals/89/c4/59/89c45905e181884c2c0cd6f0707fecb7.jpg" alt="random image" class="materialboxed responsive-img"
+            #materialboxed>
+        </div>
+        <div class="col s12 m3">
+          <img src="https://www.pequeocio.com/wp-content/uploads/2015/07/Fiesta-los-Vengadores-1.jpg" alt="random image" class="materialboxed responsive-img"
+            #materialboxed>
+        </div>
+        <div class="col s12 m3">
+          <img src="https://www.funidelia.es/blog/wp-content/uploads/2015/07/portada-fiesta-mario-bros.jpg" alt="random image" class="materialboxed responsive-img"
+            #materialboxed>
+        </div>
+        <div class="col s12 m3">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScMZ-hBNiaMDyqLmC8qbgsVgqoDK4PzF6eMr4615tSlu7ubk5c" alt="random image"
+            class="materialboxed responsive-img" #materialboxed>
+        </div>
+
+      </div>
+      <div class="row">
+        <h5 class="center">
+          <span class="teal-text-blue">Formal</span> Party</h5>
+
+        <div class="col s12 m3">
+          <img src="https://i.pinimg.com/originals/e5/79/b3/e579b3a85e60758e7fb47bdc320fe658.jpg" alt="random image" class="materialboxed responsive-img"
+            #materialboxed>
+        </div>
+        <div class="col s12 m3">
+          <img src="https://www.inolvidables15.com/miscelaneas/contenidos/imagart/mnatel%20imagen_opt.jpg" alt="random image" class="materialboxed responsive-img"
+            #materialboxed>
+        </div>
+        <div class="col s12 m3">
+          <img src="http://1.bp.blogspot.com/-J7TaGUpk-hI/WDJcKMV0GzI/AAAAAAAADF0/z9O1w5qdfU0ynNelL0XOTIzvRdOoEKnNwCK4B/s1600/fiesta-50-a%25C3%25B1os.jpg"
+            alt="random image" class="materialboxed responsive-img" #materialboxed>
+        </div>
+        <div class="col s12 m3">
+          <img src="https://photos-cdn.catchmyparty.com/PL/photos/0182/9965/photo_1__13_.jpg" alt="random image" class="materialboxed responsive-img"
+            #materialboxed>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-follow teal-blue darken-2 white-text center">
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="section section-contacto scrollspy" #scrollspy>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m6">
+          <ul class="collection with-header">
+            <li class="collection-header">
+              <h4>Partygo S.A.</h4>
+            </li>
+            <li class="collection-item">Prol las flores 29</li>
+            <li class="collection-item">San Rafael Chamapa</li>
+            <li class="collection-item">Naucalpan, Mex 53660</li>
+          </ul>
+        </div>
+        <div class="col s12 m6">
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7427.521640642559!2d-99.25732362400144!3d19.459530580633267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d203bd90be5b5f%3A0x7c30dcd45d984347!2sProl.+de+Las+Flores+29%2C+San+Rafael+Chamapa%2C+53660+Naucalpan+de+Ju%C3%A1rez%2C+M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1533544024629"
+            width="340" height="225" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="section teal-blue darken-2 white-text center">
+    <p class="flow-text">Partygo.com.mx &copy; 2018</p>
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h4>Siguenos en Redes sociales</h4>
+          <p></p>
+          <br>
+          <a href="#" class="white-text">
+            <i class="fab fa-facebook fa-6x footicon"></i>
+          </a>
+          <a href="#" class="white-text">
+            <i class="fab fa-twitter fa-6x footicon"></i>
+          </a>
+          <a href="#" class="white-text">
+            <i class="fab fa-google-plus fa-6x footicon"></i>
+          </a>
+          <a href="#" class="white-text">
+            <i class="fab fa-instagram fa-6x footicon"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+</div>

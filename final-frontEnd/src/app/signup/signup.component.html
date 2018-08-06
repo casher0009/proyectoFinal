@@ -1,0 +1,104 @@
+<app-navbar>
+
+</app-navbar>
+
+
+<!-- <section>
+  <div *ngIf="isLogged">
+
+    <h2>Inicia sesión</h2><br>
+    <input placeholder="email" [(ngModel)]="form.email" type="text">
+    <br>
+    <input placeholder="tu password" [(ngModel)]="form.password" type="password">
+    <br>
+    <button (click)="login()">Entrar</button>
+    <br>
+    <h2>
+      Acceso con redes sociales
+    </h2>
+    <p>
+      <img height="80px" src="https://cdn4.iconfinder.com/data/icons/miu-gloss-social/60/facebook-512.png" (click)="loginWithFacebook()">
+    </p>
+   <h2>
+      Entra con Google
+      <button (click)="loginWithGoogle()">Facebook Login</button>
+    </h2>
+    <p>No tienes cuenta?
+      <span (click)="isLogged=!isLogged">Click aquí</span>
+    </p>
+  </div>
+
+  <div *ngIf="!isLogged">
+    <h2>Registrate</h2>
+    <br>
+    <input [(ngModel)]="form.username" placeholder="username" type="text">
+    <br>
+    <input placeholder="email" [(ngModel)]="form.email" type="text">
+    <br>
+    <input placeholder="tu password" [(ngModel)]="form.password" type="password">
+    <br>
+    <button (click)="signUp()">Registrarme</button>
+    <br>
+    <p>Ya tienes cuenta?
+      <span (click)="isLogged=!isLogged">Click aquí</span>
+    </p>
+  </div>
+
+
+
+</section> -->
+
+<div class="login-wrap">
+  <div class="login-html">
+    <input id="tab-1" type="radio" name="tab" class="sign-in" checked>
+    <label for="tab-1" class="tab">Log In</label>
+    <input id="tab-2" type="radio" name="tab" class="sign-up">
+    <label for="tab-2" class="tab">Sign Up</label>
+    <div class="login-form">
+      <div class="sign-in-htm">
+        <div class="group">
+          <label for="user" class="label">Email</label>
+          <input [(ngModel)]="form.email" type="email" id="user" class="input">
+        </div>
+        <div class="group">
+          <label for="pass" class="label">Password</label>
+          <input id="pass" [(ngModel)]="form.password" type="password" class="input" data-type="password">
+        </div>
+        <div class="group">
+        </div>
+        <div class="group">
+          <input type="submit" (click)="login()" class="button" value="Login">
+          <h5 style="color:white"> Acceso con redes sociales
+          </h5>
+          <div id="social">
+
+            <p>
+                <img height="70px" src="https://cdn4.iconfinder.com/data/icons/miu-gloss-social/60/facebook-512.png" (click)="loginWithFacebook()">
+                <img height="70px" src="https://cdn0.iconfinder.com/data/icons/social-networks-and-media-flat-icons/136/Social_Media_Socialmedia_network_share_socialnetwork_network-15-512.png">
+              </p>
+          </div>
+  
+        </div>
+      </div>
+      <div class="sign-up-htm">
+        <div class="group">
+          <label for="user" class="label">Username</label>
+          <input [(ngModel)]="form.username" type="text" class="input">
+        </div>
+        <div class="group">
+          <label for="pass" class="label">Password</label>
+          <input [(ngModel)]="form.password" type="password" class="input" data-type="password">
+        </div>
+        <div class="group">
+        </div>
+        <div class="group">
+          <label for="pass" class="label">Email Address</label>
+          <input [(ngModel)]="form.email" type="email" class="input">
+        </div>
+        <div class="group">
+          <input type="submit" class="button" value="Sign Up">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

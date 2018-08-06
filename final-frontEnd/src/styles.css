@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+/* Custom CSS Styles */
+.section-search input {
+  padding: 5px !important;
+  font-size: 18px !important;
+  width: 90% !important;
+  border: #f4f4f4 3px solid !important;
+}
+
+.section-follow .fab {
+  margin: 5px 10px;
+}

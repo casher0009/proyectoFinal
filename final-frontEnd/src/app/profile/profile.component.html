@@ -1,0 +1,13 @@
+<h2>
+  Bienvenido <br> {{user.username}}
+</h2>
+<img height="200px" src="{{user.photoURL}}" alt="">
+<p *ngIf="user.orders.length > 0" >Hemos organizado <b> {{user.orders.length}}</b> fiestas para ti <br> Gracias por dejarnos ayudarte!! </p>
+
+<p *ngIf="user.orders.length == 0" >Aun no has organizado fiestas con nosotros <br> Dejanos ayudarte!!</p>
+
+<p>Usiario desde:  {{user.created_at | date }}</p>
+<br>
+
+
+
