@@ -26,12 +26,12 @@ const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.
 
 const app = express();
 
+
 //CORS
 app.use(require('cors')({
   origin: true,
   credentials: true
 }))
-
 
 //SESSION
 app.use(session({

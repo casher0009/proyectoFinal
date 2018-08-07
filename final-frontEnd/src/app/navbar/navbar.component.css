@@ -1,13 +1,4 @@
-ul{
-  padding: 0%;
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  text-align: center
-}
 
-img:hover{
-height: 100px;
+#logo {
+  height: 19vh;
 }
-

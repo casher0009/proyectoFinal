@@ -1,7 +1,8 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
-
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import{MatSliderModule} from '@angular/material'
 import { AppComponent } from "./app.component";
 
 import { RouterModule } from "@angular/router";
@@ -18,7 +19,6 @@ import { routes } from "./routes";
 import { SignupComponent } from "./signup/signup.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { MainComponent } from "./main/main.component";
-import { NeworderComponent } from "./neworder/neworder.component";
 import { HistorycardsComponent } from "./ordershistory/historycards/historycards.component";
 import { OrdershistoryComponent } from "./ordershistory/ordershistory.component";
 import { CardsComponent } from "./main/cards/cards.component";
@@ -27,7 +27,7 @@ import { SlidesComponent } from "./main/slides/slides.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { SuportComponent } from "./suport/suport.component";
 import { TrackorderComponent } from "./trackorder/trackorder.component";
-import { MapsComponent } from './trackorder/maps/maps.component';
+import { MapsComponent } from "./trackorder/maps/maps.component";
 
 @NgModule({
   declarations: [
@@ -41,12 +41,13 @@ import { MapsComponent } from './trackorder/maps/maps.component';
     HistorycardsComponent,
     OrdershistoryComponent,
     AppComponent,
-    NeworderComponent,
     SignupComponent,
     NavbarComponent,
     MapsComponent
   ],
   imports: [
+    MatSliderModule,
+    BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(routes),

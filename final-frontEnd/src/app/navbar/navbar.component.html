@@ -1,28 +1,53 @@
+<div  *ngIf="user" class="navbar-fixed">
+  <nav>
 
-<!-- <nav *ngIf="user" > -->
-<nav>
-        <img (click)="home()" height="80px" src="https://res.cloudinary.com/casher0009ironhack/image/upload/v1533254129/logo_partygo.png"
-          alt="partygo Logo">
-
-  <ul>
-    <li>
-        <a [routerLink]="['signup']"> Entrar </a>
-      </li>
-  
-    <li>
-      <a [routerLink]="['new']"> Nueva Orden </a>
-    </li>
-    <li>
-      <a [routerLink]="['profile']"> Perfil </a>
-    </li>
-    <li>
-      <a [routerLink]="['help']"> Ayuda </a>
-    </li>
-    <li>
-        <a (click)="logout()" [routerLink]="['']"> Salir </a>
-      </li>
-  
+    <div class="container">
+      <div class="nav-wrapper">
+        <img id="logo" src="https://res.cloudinary.com/casher0009ironhack/image/upload/v1533254129/logo_partygo.png" alt="partygo Logo">
+        <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a [routerLink]="['./new']"> Arma tu fiesta Aqui! </a>
+          </li>
+          <li>
+            <a [routerLink]="['help']"> Ayuda </a>
+          </li>
+          <li>
+            <a (click)="logout()" [routerLink]="['']"> Salir </a>
+          </li>
 
 
-  </ul>
-</nav>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<ul class="sidenav" id="mobile-nav" #sidenav>
+  <li>
+    <a [routerLink]="['new']"> Nueva Fiesta </a>
+  </li>
+  <li>
+    <a [routerLink]="['help']"> Ayuda </a>
+  </li>
+  <li>
+    <a (click)="logout()" [routerLink]="['']"> Salir </a>
+  </li>
+
+</ul>
+
+
+
+
+<div *ngIf="!user" class="navbar-fixed">
+    <nav >
+
+    <div class="container">
+      <div class="nav-wrapper">
+        <img (click)="home()" id="logo" src="https://res.cloudinary.com/casher0009ironhack/image/upload/v1533254129/logo_partygo.png" alt="partygo Logo">
+        <ul class="right hide-on-med-and-down">
+        </ul>
+      </div>
+    </div>
+  </nav>

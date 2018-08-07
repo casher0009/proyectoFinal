@@ -1,13 +1,152 @@
-<h2>
-  Bienvenido <br> {{user.username}}
-</h2>
-<img height="200px" src="{{user.photoURL}}" alt="">
-<p *ngIf="user.orders.length > 0" >Hemos organizado <b> {{user.orders.length}}</b> fiestas para ti <br> Gracias por dejarnos ayudarte!! </p>
+<app-navbar></app-navbar>
+<p></p>
+<h4>
+    Bienvenido
+    <span> {{user.username}} </span>
+  </h4>
+  <h5>tus fiestas</h5>
+  <p></p>
+<section id="profile" >
 
-<p *ngIf="user.orders.length == 0" >Aun no has organizado fiestas con nosotros <br> Dejanos ayudarte!!</p>
+      <div id="usuario" class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img id="foto" width="100px" src="{{user.photoURL}}" alt="user.username">
+            </div>
+            <div class="card-content">
+              <p *ngIf="user.orders.length > 0">Hemos organizado
+                <b> {{user.orders.length}}</b> fiestas contigo
+                <br> Gracias por dejarnos ayudarte!! </p>
+  
+              <p *ngIf="user.orders.length == 0">Aun no has organizado fiestas con nosotros
+                <br> Dejanos ayudarte!!</p>
+              <br>
+  
+              <p>Usiario desde: {{user.created_at | date }}</p>
+            </div>
+          </div>
+        </div>
+  <div class="container">
+    <div class="row">
 
-<p>Usiario desde:  {{user.created_at | date }}</p>
-<br>
+      <div *ngFor="let order of user.orders" class="fiestas col s12 m4">
+          <div class="card-panel">
+            <img class="cardimg" src="{{order.imgURL}}" alt="">
+            <p>Fiesta de:
+              <br><span>{{order.celebrated}}</span></p>
+            <p>Sillas: {{order.chairs}},</p>
+            <p>Mesas: {{order.tables}},</p>            <p>Mesas: {{order.tables}},</p>
+            <p>{{order.created_at | date}},</p>
+          
+          </div>
+        </div>
+
+    </div>
+  </div>
 
 
 
+</section>
+
+<!-- modal -->
+
+<a id="nueva" (click)="onModal()" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+<div *ngIf="modal" id="modal1" class="modal">
+    <div class="modal-content">
+      <h3>Nueva Fiesta!!</h3>
+      <label>Nombre del Festejado</label>
+      <input type="text">
+      <label>Sillas:</label>
+      <mat-slider thumbLabel min="0" max="1000" step="10" value="10"></mat-slider>
+      <label>Mesas:</label>
+      <mat-slider thumbLabel min="0" max="100" step="1" value="10"></mat-slider>
+
+      <label>Tema:</label>
+      <section id="galeria" class="section section-gallery scrollspy" #scrollspy>
+          <div class="container">
+            <div class="row">
+              <h6 class="center">
+                <span class="teal-text-blue">Girls</span> Party</h6>
+      
+              <div class="col s12 m3">
+      
+                <img src="https://i.pinimg.com/originals/81/a3/c5/81a3c5a21a97c7432fb3b8e2cf3dca36.jpg" alt="random image" class="materialboxed responsive-img"
+                  #materialboxed>
+              </div>
+              <div class="col s12 m3">
+                <img src="https://i.pinimg.com/564x/3d/3a/e6/3d3ae6b35948bf14e955292aa46b39ab.jpg" alt="random image" class="materialboxed responsive-img"
+                  #materialboxed>
+              </div>
+              <div class="col s12 m3">
+                <img src="https://i.pinimg.com/originals/89/8c/13/898c134881432eda8192355d4437b24e.jpg" alt="random image" class="materialboxed responsive-img"
+                  #materialboxed>
+              </div>
+              <div class="col s12 m3">
+                <img src="https://i.pinimg.com/originals/d3/d3/99/d3d3998b66a0197c46a93ad923fe6bc2.jpg" alt="random image" class="materialboxed responsive-img"
+                  #materialboxed>
+              </div>
+      
+            </div>
+            <div class="row">
+              <h6 class="center">
+                <span class="teal-text-blue">Boys</span> Party</h6>
+      
+              <div class="col s12 m3">
+                <img src="https://i.pinimg.com/originals/89/c4/59/89c45905e181884c2c0cd6f0707fecb7.jpg" alt="random image" class="materialboxed responsive-img"
+                  #materialboxed>
+              </div>
+              <div class="col s12 m3">
+                <img src="https://www.pequeocio.com/wp-content/uploads/2015/07/Fiesta-los-Vengadores-1.jpg" alt="random image" class="materialboxed responsive-img"
+                  #materialboxed>
+              </div>
+              <div class="col s12 m3">
+                <img src="https://www.funidelia.es/blog/wp-content/uploads/2015/07/portada-fiesta-mario-bros.jpg" alt="random image" class="materialboxed responsive-img"
+                  #materialboxed>
+              </div>
+              <div class="col s12 m3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScMZ-hBNiaMDyqLmC8qbgsVgqoDK4PzF6eMr4615tSlu7ubk5c" alt="random image"
+                  class="materialboxed responsive-img" #materialboxed>
+              </div>
+      
+            </div>
+            <div class="row">
+              <h6 class="center">
+                <span class="teal-text-blue">Formal</span> Party</h6>
+      
+              <div class="col s12 m3">
+                <img src="https://i.pinimg.com/originals/e5/79/b3/e579b3a85e60758e7fb47bdc320fe658.jpg" alt="random image" class="materialboxed responsive-img"
+                  #materialboxed>
+              </div>
+              <div class="col s12 m3">
+                <img src="https://www.inolvidables15.com/miscelaneas/contenidos/imagart/mnatel%20imagen_opt.jpg" alt="random image" class="materialboxed responsive-img"
+                  #materialboxed>
+              </div>
+              <div class="col s12 m3">
+                <img src="http://1.bp.blogspot.com/-J7TaGUpk-hI/WDJcKMV0GzI/AAAAAAAADF0/z9O1w5qdfU0ynNelL0XOTIzvRdOoEKnNwCK4B/s1600/fiesta-50-a%25C3%25B1os.jpg"
+                  alt="random image" class="materialboxed responsive-img" #materialboxed>
+              </div>
+              <div class="col s12 m3">
+                <img src="https://photos-cdn.catchmyparty.com/PL/photos/0182/9965/photo_1__13_.jpg" alt="random image" class="materialboxed responsive-img"
+                  #materialboxed>
+              </div>
+            </div>
+          </div>
+        </section>
+      
+      
+    </div>
+    <div class="modal-footer">
+        <a (click)="offModal()" class="modal-close waves-effect waves-red btn-flat">Close</a>
+
+      <a (click)="offModal()" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
+<!-- modal2 -->
+
+<script> 
+//  document.addEventListener('DOMContentLoaded', function() {
+//     var elems = document.querySelectorAll('.modal');
+//     var instances = M.Modal.init(elems, options);
+//   });
+</script>

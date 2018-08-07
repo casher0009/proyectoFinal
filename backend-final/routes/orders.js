@@ -15,6 +15,14 @@ function isAuthenticated(req, res, next) {
   }
 }
 
+router.get('/user/:id',(req,res,next)=>{
+  User.findById({_id:req.params.id}).populate('orders')
+  .then(user=>{
+    res.status(200).json(user)
+  })
+  .catch(e=>next(e))
+
+} )
 
 router.get('/orders',isAuthenticated, (req, res) => {
   Order.find({user:req.user._id})

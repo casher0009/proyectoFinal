@@ -1,0 +1,46 @@
+
+
+#usuario{
+  width: 25% !important;
+
+  position: fixed;
+  top:58px;
+  left: 1px
+}
+
+h4, h5{
+  text-align: center;
+  padding-left: 22%;
+
+}
+span{
+  color: #F16170
+}
+#nueva{
+  position: fixed !important;
+  right: 30px;
+  bottom: 50px;
+}
+
+#profile{
+  padding-left: 20%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row
+}
+
+.modal{
+  display: block !important;
+  top: 20%
+}
+
+mat-slider{
+  width: 100%
+}
+.fiestas{
+  min-width: 33% !important;
+}
+
+.cardimg{
+  width: 100%;
+}

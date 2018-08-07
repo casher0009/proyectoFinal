@@ -10,7 +10,6 @@ export class MainComponent implements OnInit, AfterViewInit{
     // Access document elements
     @ViewChild('sidenav') sidenav: ElementRef;
     @ViewChild('slider') slider: ElementRef;
-    @ViewChild('autocomplete') autocomplete: ElementRef;
     @ViewChildren('materialboxed') materialboxed: QueryList<ElementRef>;
     @ViewChildren('scrollspy') scrollspy: QueryList<ElementRef>;
   
@@ -24,15 +23,6 @@ export class MainComponent implements OnInit, AfterViewInit{
 
     // Sidena
     M.Sidenav.init(this.sidenav.nativeElement);
-
-    // Slider
-    const sliderOptions = {
-      indicators: false,
-      height: 460,
-      transition: 440,
-      interval: 5500
-    };
-    M.Slider.init(this.slider.nativeElement, sliderOptions);
 
     // Material Box
     const imgArray = this.materialboxed.toArray();
