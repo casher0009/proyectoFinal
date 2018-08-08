@@ -33,8 +33,10 @@
   </div>
   <ul class="sidenav" id="mobile-nav" #sidenav>
     <li>
-      <a href="#inicio">Inicio</a>
+      <a [routerLink]="['signup']"> Arma tu fiesta!! </a>
     </li>
+
+
     <li>
       <a href="#reciente">Fiestas Recientes</a>
     </li>
@@ -44,18 +46,17 @@
     <li>
       <a href="#contacto">Contacto</a>
     </li>
-    <li>
-        <a [routerLink]="['signup']"> Arma tu fiesta!! </a>
-      </li>
-
   </ul>
 
-    <!-- Slider -->
+  <!-- Slider -->
 
-<app-slides></app-slides>
+  <app-slides></app-slides>
 
   <section class="section section-follow teal-blue darken-2 white-text center">
-      <a [routerLink]="['signup']"> <h5 id="Order" > >>>Pide tu fiesta ahora mismo!!<<< </h5> </a>
+    <a [routerLink]="['signup']">
+      <h5 id="Order"> >>>Pide tu fiesta ahora mismo!!
+        <<< </h5>
+    </a>
 
   </section>
 

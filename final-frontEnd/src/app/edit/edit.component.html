@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+
+<div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Edita la Fiesta!!</h4>
+      <label>Nombre del Festejado</label>
+      <input value="{{this.order.celebrated}}" [(ngModel)]="modalform.celebrated" type="text">
+      <label>Sillas:</label>
+      <mat-slider value="{{this.order.chairs}}" [(ngModel)]="modalform.chairs" thumbLabel min="0" max="1000" step="10"></mat-slider>
+      <label>Mesas:</label>
+      <mat-slider value="this.order.tables" [(ngModel)]="modalform.tables" thumbLabel min="0" max="100" step="1"></mat-slider>
+    
+      <label>Tema:</label>
+      <select id="select" class="icons" label="Escoge tu tema" [(ngModel)]="modalform.theme">
+        <optgroup label="Fiesta de niñas">
+          <option value="Shopkins">Shopkins</option>
+          <option value="Enredados">Enredados</option>
+          <option value="My Little Pony">My Little Pony</option>
+          <option value="Minnie Mouse">Minnie Mouse</option>
+        </optgroup>
+        <optgroup label="Fiesta de niños">
+          <option value="Increibles">Increibles</option>
+          <option value="Avengers">Avengers</option>
+          <option value="Mario Bross">Mario Bross</option>
+          <option value="Batman">Batman</option>
+        </optgroup>
+        <optgroup label="Fiesta Formal">
+          <option value="Jardin">Jardin</option>
+          <option value="Salon">Salon</option>
+          <option value="Jardin Elegante">Jardin Elegante</option>
+          <option value="Poker">Poker</option>
+        </optgroup>
+      </select>
+  
+    
+      <div class="modal-footer">
+          <a (click)="edited()" class="pink waves-effect waves-light btn-large">Editar</a>
+          <a (click)="toActual()" class="red waves-effect waves-light btn-large">Cancelar</a>
+          </div>
+  
+    </div>
+  </div>
+  

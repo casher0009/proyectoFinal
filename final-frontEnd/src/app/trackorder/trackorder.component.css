@@ -1,0 +1,22 @@
+#usuario{
+  width: 25% !important;
+
+  position: fixed;
+  top:58px;
+  left: 1px
+}
+section{
+  margin-top: 2%;
+  padding-left: 30% !important;
+  padding-right: 5%;
+  text-align: center
+}
+
+span{
+  font-size: 25px
+}
+
+.container{
+  display: flex;
+  justify-content: space-around
+}

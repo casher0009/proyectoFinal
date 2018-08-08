@@ -8,8 +8,8 @@ import { map } from "rxjs/operators";
 })
 export class OrderserviceService {
   constructor(private http: Http) {}
-  url = "http://localhost:3000/orders";
-
+  url = "http://localhost:3000/orders/";
+  // url = "/orders"
   //get all Orders
   getAllOrders() {
     return this.http
@@ -26,7 +26,8 @@ export class OrderserviceService {
   }
 
   //create one Order
-  createOrder(obj) {
+  createOrder(obj) :Observable<String> {
+    console.log(obj)
     return this.http
       .post(this.url + "new", obj)
       .pipe(map((res: Response) => res.json()));
@@ -40,9 +41,11 @@ export class OrderserviceService {
   }
 
   //delete one Order richard
-  deleteOrder(id) {
+  deleteOrder(id):Observable<String> {
+    console.log(id, "id para borrar otra vez")
+    console.log(this.url + id)
     return this.http
-      .delete(this.url + id)
+      .delete(this.url + id, {withCredentials:true})
       .pipe(map((res: Response) => res.json()));
   }
 }

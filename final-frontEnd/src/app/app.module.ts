@@ -2,9 +2,11 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import{MatSliderModule} from '@angular/material'
+import {MatSelectModule, MatNativeDateModule,MatSliderModule, MatInputModule,MatDatepickerModule} from "@angular/material";
 import { AppComponent } from "./app.component";
+import { AgmCoreModule } from '@agm/core';
 
+// import {} from '@types/googlemaps';
 import { RouterModule } from "@angular/router";
 import { HttpModule } from "@angular/http";
 
@@ -28,6 +30,7 @@ import { ProfileComponent } from "./profile/profile.component";
 import { SuportComponent } from "./suport/suport.component";
 import { TrackorderComponent } from "./trackorder/trackorder.component";
 import { MapsComponent } from "./trackorder/maps/maps.component";
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -43,17 +46,24 @@ import { MapsComponent } from "./trackorder/maps/maps.component";
     AppComponent,
     SignupComponent,
     NavbarComponent,
-    MapsComponent
+    MapsComponent,
+    EditComponent,
   ],
-  imports: [
+  imports: [MatNativeDateModule,MatSelectModule,
     MatSliderModule,
     BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(routes),
-    HttpModule
+    HttpModule,
+    MatDatepickerModule,MatInputModule,
+    AgmCoreModule.forRoot({
+      apiKey: "AIzaSyB68mElBbAESAOCCXYi3zGWc6CWMH1ppis"
+    })
+
   ],
-  providers: [OrderserviceService, AuthService, FirebaseService, UserService],
+  providers: [OrderserviceService, AuthService, FirebaseService, UserService,
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

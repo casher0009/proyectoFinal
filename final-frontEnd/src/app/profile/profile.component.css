@@ -39,8 +39,44 @@ mat-slider{
 }
 .fiestas{
   min-width: 33% !important;
+  margin-bottom: 5%
+}
+
+.card-panel{
+    height: 300px !important;
 }
 
 .cardimg{
   width: 100%;
+}
+
+#fecha{
+  width: 25% !important
+}
+select{
+  display: block
+}
+.detalle{
+  /* position: absolute; */
+  bottom: 0px
+}
+
+.contenedor{
+  position: relative
+}
+
+.map{
+  height: 300px;
+}
+
+#botones{
+  display: flex;
+  justify-content: center
+}
+
+label{
+  font-size: 25px;
+}
+#donde{
+text-align: center;
 }

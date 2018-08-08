@@ -23,7 +23,7 @@ passport.authenticate('facebook-token'),
 
 router.get("/logout", (req, res, next) => {
   req.logout();
-  res.send("cerrado ??? ");
+  res.send("cerrado");
 });
 
 router.post("/login", passport.authenticate("local"), (req, res, next) => {

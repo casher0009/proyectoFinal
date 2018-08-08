@@ -17,8 +17,6 @@ export class AuthService {
   signUp(auth): Observable<string>{
     return this.http.post(this.url + 'signup', auth)
     .pipe(map(res=>res.json()))
-
-
 }
 
 login(auth): Observable<string>{
@@ -27,7 +25,8 @@ login(auth): Observable<string>{
 }
 
 logout(){
-  localStorage.removeItem('user')
+  return this.http.get(this.url + 'logout')
+
 }
 
 }

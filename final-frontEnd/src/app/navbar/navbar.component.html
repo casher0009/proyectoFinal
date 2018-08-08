@@ -3,22 +3,17 @@
 
     <div class="container">
       <div class="nav-wrapper">
-        <img id="logo" src="https://res.cloudinary.com/casher0009ironhack/image/upload/v1533254129/logo_partygo.png" alt="partygo Logo">
+        <img (click)="home()" id="logo" src="https://res.cloudinary.com/casher0009ironhack/image/upload/v1533254129/logo_partygo.png" alt="partygo Logo">
         <a href="#" class="sidenav-trigger" data-target="mobile-nav">
           <i class="material-icons">menu</i>
         </a>
         <ul class="right hide-on-med-and-down">
           <li>
-            <a [routerLink]="['./new']"> Arma tu fiesta Aqui! </a>
+            <a (click)="help()" > Ayuda </a>
           </li>
           <li>
-            <a [routerLink]="['help']"> Ayuda </a>
+            <a (click)="logout(); home()"> Salir </a>
           </li>
-          <li>
-            <a (click)="logout()" [routerLink]="['']"> Salir </a>
-          </li>
-
-
         </ul>
       </div>
     </div>

@@ -7,7 +7,7 @@ import { ProfileComponent } from "./profile/profile.component";
 import { OrdershistoryComponent } from "./ordershistory/ordershistory.component";
 import { SuportComponent } from "./suport/suport.component";
 import { TrackorderComponent } from "./trackorder/trackorder.component";
-
+import {EditComponent} from "./edit/edit.component"
 export const routes: Routes = [
   {
     path: "",
@@ -33,5 +33,10 @@ export const routes: Routes = [
   {
     path: "actual",
     component: TrackorderComponent
+  },
+    {
+    path: "edit",
+    component: EditComponent
   }
+
 ];

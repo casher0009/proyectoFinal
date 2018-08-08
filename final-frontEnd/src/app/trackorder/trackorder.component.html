@@ -1,3 +1,55 @@
-<p>
-  trackorder works!
-</p>
+<app-navbar></app-navbar>
+
+<!-- <agm-map style="height: 300px" [latitude]="p.location.coordinates[1]" [longitude]="p.location.coordinates[0]" [zoom]="17" >
+    <agm-marker [latitude]="p.location.coordinates[1]" [longitude]="p.location.coordinates[0]"></agm-marker>
+</agm-map> -->
+
+<div id="usuario" class="col s12 m4">
+  <div class="card">
+    <div class="card-image">
+      <img id="foto" width="100px" src="{{this.user.photoURL}}" alt="user.username">
+    </div>
+    <div class="card-content">
+      <h5>{{this.user.username}}</h5>
+      <h6>Este es el detalle de tu pedido:</h6>
+      <p> Fiesta para:
+        <span class="red-text">{{this.order.celebrated}}</span>
+      </p>
+
+      <p> sillas:
+        <span class="red-text">{{this.order.chairs}}</span>
+      </p>
+      <p>Mesas:
+        <span class="red-text"> {{this.order.tables}}</span>
+      </p>
+      <p>Adorno:
+        <span class="red-text">{{this.order.theme}}</span>
+      </p>
+    </div>
+  </div>
+</div>
+<section id="map">
+  <p *ngIf="this.order.active">Tu pedido esta:
+    <span class="teal-text"> en proceso</span>
+  </p>
+  <p *ngIf="!this.order.active">Tu pedido esta:
+    <span class="red-text"> Cancelado</span>
+  </p>
+
+  <h4>La Fiesta es en:</h4>
+  <h5>
+    <span class="blue-text">Tu casa</span>
+  </h5>
+  <agm-map [zoom]="zoom" style="height: 300px" [latitude]="lat" [longitude]="lng">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
+  <br>
+  <div *ngIf="this.order.active" class="container">
+    <a (click)="toProfile()" class="blue waves-effect waves-light btn-large">Volver a perfil</a>
+    <a (click)="toEdit()" class="pink waves-effect waves-light btn-large">Editar</a>
+    <a (click)="toCancel()" class="red waves-effect waves-light btn-large">Cancelar</a>
+  </div>
+  <div *ngIf="!this.order.active" class="container">
+    <a (click)="toProfile()" class="blue waves-effect waves-light btn-large">Volver a perfil</a>
+  </div>
+</section>

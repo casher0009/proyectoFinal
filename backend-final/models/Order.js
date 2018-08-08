@@ -1,12 +1,17 @@
 const Schema = require("mongoose").Schema;
 const orderSchema = new require("mongoose").Schema(
   {
+    active:{
+      type:Boolean,
+      default:true
+    },
     user: {
       type: Schema.Types.ObjectId,
       ref: "User",
       required: true
     },
     celebrated: String,
+    date:Date,
     theme: String,
     imgURL: {
       type: String,
