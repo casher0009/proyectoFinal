@@ -70,7 +70,8 @@ import { ProviderslistComponent } from "./providerslist/providerslist.component"
     MatDatepickerModule,
     MatInputModule,
     AgmCoreModule.forRoot({
-      apiKey: "AIzaSyB68mElBbAESAOCCXYi3zGWc6CWMH1ppis"
+      apiKey: "AIzaSyB68mElBbAESAOCCXYi3zGWc6CWMH1ppis",
+      libraries:["places"]
     })
   ],
   providers: [
