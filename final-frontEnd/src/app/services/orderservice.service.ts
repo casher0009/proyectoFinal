@@ -8,8 +8,8 @@ import { map } from "rxjs/operators";
 })
 export class OrderserviceService {
   constructor(private http: Http) {}
-  url = "http://localhost:3000/orders/";
-  // url = "/orders"
+  // url = "http://localhost:3000/orders/";
+  url = "/orders/"
   //get all Orders
   getAllOrders() {
     return this.http

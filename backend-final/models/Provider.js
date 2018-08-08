@@ -1,13 +1,12 @@
 const passportLocalMongoose = require("passport-local-mongoose");
 const Schema = require("mongoose").Schema;
-const userSchema = new require("mongoose").Schema(
+const providerSchema = new require("mongoose").Schema(
   {
-    username: String,
-    facebookId:String,
+    Provider: String,
     phone: Number,
     photoURL:{
       type:String,
-      default:"https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Party-Poppers-512.png"
+      default:"http://fiestasyeventos.mx/contenido/uploads/2016/07/logo-fiestas-y-eventos-390x200.png"
     },
     email: String,
     addres: [
@@ -26,11 +25,6 @@ const userSchema = new require("mongoose").Schema(
         }
       }
     ],
-    role: {
-      type: String,
-      enum: ["USER", "ADMIN"],
-      default: "USER"
-    },
     orders:[{
       type: Schema.Types.ObjectId,
       ref: "Order"
@@ -47,4 +41,4 @@ const userSchema = new require("mongoose").Schema(
 
 userSchema.plugin(passportLocalMongoose, { usernameField: "email" });
 
-module.exports = require("mongoose").model("User", userSchema);
+module.exports = require("mongoose").model("Provider", providerSchema);

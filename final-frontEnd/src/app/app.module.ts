@@ -2,9 +2,15 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import {MatSelectModule, MatNativeDateModule,MatSliderModule, MatInputModule,MatDatepickerModule} from "@angular/material";
+import {
+  MatSelectModule,
+  MatNativeDateModule,
+  MatSliderModule,
+  MatInputModule,
+  MatDatepickerModule
+} from "@angular/material";
 import { AppComponent } from "./app.component";
-import { AgmCoreModule } from '@agm/core';
+import { AgmCoreModule } from "@agm/core";
 
 // import {} from '@types/googlemaps';
 import { RouterModule } from "@angular/router";
@@ -15,6 +21,7 @@ import { AuthService } from "./services/auth.service";
 import { FirebaseService } from "./services/firebase.service";
 import { UserService } from "./services/user.service";
 import { OrderserviceService } from "./services/orderservice.service";
+import { ProvidersService } from "./services/providers.service";
 import { routes } from "./routes";
 
 //componentes
@@ -30,7 +37,8 @@ import { ProfileComponent } from "./profile/profile.component";
 import { SuportComponent } from "./suport/suport.component";
 import { TrackorderComponent } from "./trackorder/trackorder.component";
 import { MapsComponent } from "./trackorder/maps/maps.component";
-import { EditComponent } from './edit/edit.component';
+import { EditComponent } from "./edit/edit.component";
+import { ProviderslistComponent } from "./providerslist/providerslist.component";
 
 @NgModule({
   declarations: [
@@ -48,22 +56,30 @@ import { EditComponent } from './edit/edit.component';
     NavbarComponent,
     MapsComponent,
     EditComponent,
+    ProviderslistComponent
   ],
-  imports: [MatNativeDateModule,MatSelectModule,
+  imports: [
+    MatNativeDateModule,
+    MatSelectModule,
     MatSliderModule,
     BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(routes),
     HttpModule,
-    MatDatepickerModule,MatInputModule,
+    MatDatepickerModule,
+    MatInputModule,
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyB68mElBbAESAOCCXYi3zGWc6CWMH1ppis"
     })
-
   ],
-  providers: [OrderserviceService, AuthService, FirebaseService, UserService,
-    ],
+  providers: [
+    OrderserviceService,
+    AuthService,
+    FirebaseService,
+    UserService,
+    ProvidersService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
